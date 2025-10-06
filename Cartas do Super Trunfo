@@ -1,9 +1,70 @@
 #include <stdio.h>
 
-printf ("Estado:\n");
-printf ("Código da carta:\n");
-printf ("Nome da cidade:\n");
-printf ("População:\n");
-printf ("Área (em km):\n");
-printf ("Pib:\n");
-printf ("Número de pontos turísticos:\n");
+int main (){
+    
+    char est1, est2, cid1, cid2;
+    
+    int pop1, pop2, num1, num2,cod1, cod2;
+    
+    float km1, km2, pib1, pib2, den1, den2, per1, per2, sp1, sp2;
+
+
+printf ("Carta 1\n");
+printf ("\nEstado:");
+scanf ("%c", & est1);
+printf ("\nCódigo da carta:");
+scanf ("%d", &cod1);
+printf ("\nNome da cidade:");
+scanf ("%c", &cid1);
+printf ("\nPopulação:");
+scanf ("%d", &pop1);
+printf ("\nArea (em km):");
+scanf ("%f", &km1);
+printf ("\nPib:");
+scanf ("%f", &pib1);
+printf ("\nNúmero de pontos turísticos:");
+scanf ("%d", & num1);
+
+den1 = pop1 / cid1;
+printf("\nDensidade Populacional:%2.f", den1);
+
+per1 =(float) pib1/pop1;
+printf("\nPib per Capital:%2.f", per1);
+
+sp1= pop1+km1+pib1+per1+den1;
+printf ("\nSuper Poder: %f: ", sp1);
+
+printf ("\nCarta 2\n");
+printf ("\nEstado:");
+scanf ("%c", &est2);
+printf ("\nCodigo da carta:");
+scanf ("%d", &cod2);
+printf ("\nNome da cidade:");
+scanf ("%c", & cid2);
+printf ("\nPopulação:");
+scanf ("%d", &pop2);
+printf ("\nArea (em km):");
+scanf ("%f", &km2);
+printf ("\nPib:");
+scanf ("%f", &pib2);
+printf ("\nNúmero de pontos turísticos:");
+scanf ("%d", & num2);
+
+den2 = pop2 / cid2;
+printf("\nDensidade Populacional:%2.f", den2);
+
+per2 = pib2/pop2;
+printf("\nPib per Capital:%2.f", per2);
+
+sp2= pop2+km2+pib2+per2+den2;
+printf ("\nSuper poder: %f", sp2);
+
+if (sp1 > sp2){
+    printf ("\nCarta 1 venceu...");
+}else{
+    printf ("\nCarta 2 Venceu...");
+}
+
+
+return 0;
+}
