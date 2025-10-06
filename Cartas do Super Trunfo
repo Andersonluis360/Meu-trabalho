@@ -4,9 +4,20 @@ int main (){
     
     char est1, est2, cid1, cid2;
     
-    int pop1, pop2, num1, num2,cod1, cod2;
+    int pop1, pop2, num1, num2,cod1, cod2, op;
     
     float km1, km2, pib1, pib2, den1, den2, per1, per2, sp1, sp2;
+
+    printf ("\nMenu Principal\n");
+    printf ("\n1.Iniciar o Jogo\n");
+    printf ("\n2.Ver Regras\n");
+    printf ("\n3.Sair\n");
+    printf ("\nEscolha uma opção:");
+    scanf("%d", &op);
+    
+    switch (op){
+        case 1:
+    
 
 
 printf ("Carta 1\n");
@@ -59,12 +70,29 @@ printf("\nPib per Capital:%2.f", per2);
 sp2= pop2+km2+pib2+per2+den2;
 printf ("\nSuper poder: %f", sp2);
 
-if (sp1 > sp2){
-    printf ("\nCarta 1 venceu...");
-}else{
-    printf ("\nCarta 2 Venceu...");
+break;
+case 2:
+
+printf("\nPreencher os valores da carta.\n");
+
+break;
+case 3:
+
+    printf ("\nSaindo...\n");
+    return 0 ;
+    
+    break;
+    default :
+    
+    printf ("\nOpção Invalida\n");
+    
 }
 
+
+
+
+return 0;
+}
 
 return 0;
 }
